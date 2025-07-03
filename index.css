@@ -1,11 +1,10 @@
 html, body {
-  width: 100%;
-  height:100%;
+  width: 100% !important;
 }
 
-body {
+.background-body {
     background: linear-gradient(-45deg, #202020, #e3e3e3, #424242, #202020, #111111);
-    background-size: 400% 400%;
+    background-size: 200% 200%;
     animation: gradient 15s ease infinite;
 }
 
@@ -74,15 +73,15 @@ body {
         
         .red-btn {
             width: 300px;
-            height: 150px;
+            height: 300px;
             margin: 15px;
             background: rgb(255, 0, 0);
             background: rgb(131, 58, 180);
             background: linear-gradient(
                 90deg,
-                rgba(131, 58, 180, 1) 0%,
-                rgba(253, 29, 29, 1) 50%,
-                rgba(252, 176, 69, 1) 100%
+                #c7c7c7 0%,
+                #808080 50%,
+                #444444 100%
             );
             color: white;
             border: none;
@@ -97,14 +96,14 @@ body {
         
         .blue-btn {
             width: 300px;
-            height: 150px;
+            height: 300px;
             margin: 15px;
             background: rgb(0, 8, 144);
             background: linear-gradient(
                 90deg,
-                rgba(0, 8, 144, 1) 0%,
-                rgba(16, 0, 255, 1) 22%,
-                rgba(86, 255, 247, 1) 100%
+                #c7c7c7 0%,
+                #808080 50%,
+                #444444 100%
             );
             color: white;
             border: none;
@@ -117,27 +116,28 @@ body {
             overflow: hidden;
         }
         
-        button:hover {
+        #button:hover {
             color: rgb(0, 0, 0);
         }
         
-        button:after {
+        #button:after {
             content: "";
             background: white;
+            opacity:80%;
             position: absolute;
             z-index: -1;
             left: -20%;
             right: -20%;
             top: 0;
             bottom: 0;
-            transform: skewX(-45deg) scale(0, 1);
+            transform: skewX(-90deg) scale(0, 1);
             transition: all 0.5s;
         }
         
-        button:hover:after {
+        #button:hover:after {
             transform: skewX(-45deg) scale(1, 1);
             -webkit-transition: all 0.5s;
-            transition: all 0.5s;
+            transition: all 0.5s;          
         }
 
 /* CARDDECK */
@@ -189,3 +189,195 @@ body {
             font-size: 2.2em;
             fill: #fff;
         }
+
+
+/* BUTTONS */
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(0, 0, 0, 0.6);
+  --animation-color: #ffffff;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+/* NAVBAR */
+.navbar-fs {
+    --fs-size: 1.5em !important;
+  letter-spacing: 2.5px !important;
+  margin-right: 8px !important;
+  font-family: "Arial";    
+}
+
+/* SLIDER AUTOMATIC */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+} */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 50px;
+  margin: 0 40px;
+}
+
+/* CARD PROJECT */
+.card-project {
+  width: 360px;
+  height: 120px;
+  transition: all .5s;
+  box-shadow: 15px 15px 30px rgba(25, 25, 25, 0.11),
+             -15px -15px 30px rgba(60, 60, 60, 0.082);
+  text-align: center;
+  overflow: hidden;
+}
+
+.card-project:hover {
+  height: 260px;
+  background: linear-gradient(360deg, #edededc5 60%, hsla(0, 0%, 13%, 1) 70%);
+}
+
+.card-project .header {
+  height: 120px;  
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #212121;
+  margin-bottom: 16px;
+}
+
+.card-project .header .img-box {
+  width: 50px;
+}
+
+.card-project .header .title {
+  font-size: 1em;
+  letter-spacing: .1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 4px 0 14px 0;
+  transition: all .5s;
+  color: #edededc5;
+}
+
+.card-project:hover .header {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+}
+
+.card-project:hover .card-project .header .title {
+  padding: 0;
+}
+
+.card-project .content {
+  display: block;
+  text-align: left;
+  color: #212121;
+  margin: 0 18px;
+}
+
+.card-project .content p {
+  transition: all .5s;
+  font-size: .8em;
+  margin-bottom: 8px;
+}
+
+.card-project .content a {
+  color: #1d8122;
+  cursor: pointer;
+  transition: all .5s;
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+.card-project .content .btn-link:hover {
+  border-bottom: 1px solid #1d8122;
+}
