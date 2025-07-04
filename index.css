@@ -9,6 +9,8 @@ body {
   animation: gradient 15s ease infinite;
 }
 
+
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -152,54 +154,6 @@ body {
 }
 
 /* CARDDECK */
-.container-card {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container-card .glass {
-  position: relative;
-  width: 160px;
-  height: 180px;
-  background: linear-gradient(#fff2, transparent);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  border-radius: 10px;
-  margin: 0 -35px;
-  backdrop-filter: blur(10px);
-  transform: rotate(calc(var(--r) * 1deg));
-}
-
-.container-card:hover .glass {
-  transform: rotate(0deg);
-  margin: 0 8px;
-}
-
-.container-card .glass::before {
-  content: attr(data-text);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.05);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 0.9em;
-  font-weight: 500;
-}
-
-.container-card .glass svg {
-  font-size: 2.2em;
-  fill: #fff;
-}
 
 
 /* BUTTONS */
@@ -399,7 +353,7 @@ body {
 /* FORMS */
 .form-body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%) !important;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -408,7 +362,7 @@ body {
 }
 
 .form-container {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05) !important;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
@@ -443,7 +397,7 @@ body {
 
 label {
   display: block;
-  color: #cccccc;
+  color: #cccccc !important;
   font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 8px;
@@ -456,8 +410,8 @@ input[type="email"],
 textarea {
   width: 100%;
   padding: 15px 20px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
   border-radius: 12px;
   color: #ffffff;
   font-size: 1rem;
@@ -468,15 +422,15 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 textarea {
@@ -488,7 +442,7 @@ textarea {
 .submit-btn {
   width: 100%;
   padding: 15px;
-  background: linear-gradient(135deg, #333333 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, #333333 0%, #1a1a1a 100%) !important;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
@@ -503,7 +457,7 @@ textarea {
 }
 
 .submit-btn:hover {
-  background: linear-gradient(135deg, #444444 0%, #2a2a2a 100%);
+  background: linear-gradient(135deg, #444444 0%, #2a2a2a 100%) !important;
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -553,4 +507,174 @@ textarea {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* CARD PROJECTS */
+.glow-card-wrapper {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.glow-card-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.glow-image-card {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.glow-image-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      #ff6b6b 0%,
+      #4ecdc4 25%,
+      #45b7d1 50%,
+      #96ceb4 75%,
+      #ffeaa7 100%);
+  padding: 3px;
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.glow-image-card::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-radius: 13px;
+  z-index: 0;
+}
+
+.glow-image-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 80px rgba(255, 107, 107, 0.3),
+    0 0 120px rgba(78, 205, 196, 0.2);
+}
+
+.glow-image-card:hover::before {
+  opacity: 1;
+}
+
+.glow-card-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.glow-image-placeholder {
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(135deg, #2d2d2d 0%, #404040 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-image-view {
+  object-fit: cover;
+}
+
+.glow-image-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.glow-image-card:hover .glow-image-placeholder::before {
+  left: 100%;
+}
+
+.glow-card-title {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.glow-image-card:hover .glow-card-title {
+  color: #ff6b6b;
+}
+
+.glow-card-description {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.glow-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.glow-card-icon {
+  width: 24px;
+  height: 24px;
+  fill: #888;
+  transition: fill 0.3s ease;
+}
+
+.glow-image-card:hover .glow-card-icon {
+  fill: #4ecdc4;
+}
+
+/* Actual image styling */
+.glow-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.glow-image-card:hover .glow-card-image {
+  transform: scale(1.05);
 }

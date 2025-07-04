@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BRDLYSM Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="./index.css">
@@ -28,24 +28,28 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <button class="button navbar-fs" data-text="Awesome">
-                        <span class="actual-text text-light">&nbsp;home&nbsp;</span>
-                        <span aria-hidden="true" class="hover-text">&nbsp;home&nbsp;</span>
+                        <a href="#landing">
+                            <span class="actual-text text-light">&nbsp;home&nbsp;</span>
+                            <span aria-hidden="true" class="hover-text">&nbsp;home&nbsp;</span>
+                        </a>
                     </button>
                     <button class="button navbar-fs" data-text="Awesome">
-                        <span class="actual-text text-light">&nbsp;about&nbsp;</span>
-                        <span aria-hidden="true" class="hover-text">&nbsp;about&nbsp;</span>
+                        <a href="#projects">
+                            <span class="actual-text text-light">&nbsp;projects&nbsp;</span>
+                            <span aria-hidden="true" class="hover-text">&nbsp;projects&nbsp;</span>
+                        </a>
                     </button>
                     <button class="button navbar-fs" data-text="Awesome">
-                        <span class="actual-text text-light">&nbsp;tools&nbsp;</span>
-                        <span aria-hidden="true" class="hover-text">&nbsp;tools&nbsp;</span>
+                        <a href="#tools">
+                            <span class="actual-text text-light">&nbsp;tools&nbsp;</span>
+                            <span aria-hidden="true" class="hover-text">&nbsp;tools&nbsp;</span>
+                        </a>
                     </button>
                     <button class="button navbar-fs" data-text="Awesome">
-                        <span class="actual-text text-light">&nbsp;project&nbsp;</span>
-                        <span aria-hidden="true" class="hover-text">&nbsp;project&nbsp;</span>
-                    </button>
-                    <button class="button navbar-fs" data-text="Awesome">
-                        <span class="actual-text text-light">&nbsp;contact&nbsp;</span>
-                        <span aria-hidden="true" class="hover-text">&nbsp;contact&nbsp;</span>
+                        <a href="#contact">
+                            <span class="actual-text text-light">&nbsp;contact&nbsp;</span>
+                            <span aria-hidden="true" class="hover-text">&nbsp;contact&nbsp;</span>
+                        </a>
                     </button>
                 </div>
             </div>
@@ -62,49 +66,88 @@
         <h1 class="mt-5 my-3 text-light display-1">Bradley Manalese</h1>
         <h4 class="text-light display-6 line-1 anim-typewriter typewriter">Aspiring Fullstack Developer</h4>
 
-        <p class="text-light text-center col-lg-8 col-12 my-3">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, delectus optio aperiam eum nam cum similique
-            dolorem culpa nulla facere ea, libero, debitis perspiciatis assumenda ipsa sunt. Error, commodi neque.
-            Totam tenetur laboriosam dignissimos, ex, at est voluptates quidem nostrum hic quas molestias eius!
-            Reprehenderit, quasi culpa magnam maxime quidem, vitae quo doloribus, dolor minima fugit voluptatibus optio
-            at vero.
-            Deserunt dolorum assumenda, blanditiis numquam ea ducimus vel cupiditate temporibus, praesentium rem dolore
-            illum repellat expedita beatae soluta, adipisci iusto asperiores eum perferendis aliquid harum doloremque
-            totam. Tempore, eveniet eius?
+        <p class="text-light text-center col-lg-8 col-12 my-3 fw-bold">
+            I'm an aspiring full stack developer with a passion for both front-end and back-end development. I enjoy
+            creating seamless, user-friendly web applications and am experienced with HTML, CSS, and JavaScript on the
+            front-end. For the back-end, I work with Python and C++ to build efficient and scalable systems. I’m
+            constantly learning new technologies and aim to develop solutions that are both functional and easy to use.
         </p>
 
         <a href="" class="btn btn-outline-light p-3 px-5 rounded-2 my-3">RESUME</a>
     </div>
-    <div class="bg-white d-flex justify-content-center align-items-center flex-column p-lg-5 p-3">
+    <div class="bg-white d-flex justify-content-center align-items-center flex-column p-lg-5 p-3 background-body-project"
+        id="projects">
         <h1 class="display-2 fw-bold my-5">Projects</h1>
         <!-- CARDS -->
         <!-- Card 1 -->
-        <div class="project-container col-lg-8 col-12">
-            <div class="card-project">
-                <div class="header">
-                    <div class="img-box">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
+        <div class="container d-flex flex-wrap justify-content-center align-items-center gap-5">
+            <div class="glow-image-card">
+                <div class="glow-card-content">
+                    <div class="glow-image-placeholder">
+                        <a href="https://brad-git03.github.io/LAB-ACTIVITY/" target="_blank">
+                            <img src="./assets/bulbasaur-page.png" alt="Bulbasaur Page"
+                                class="glow-image-placeholder-img img-fluid">
+                        </a>
+                    </div>
+                    <h3 class="glow-card-title">Bulbasaur Website</h3>
+                    <p class="glow-card-description">This is my first draft website, Bulbasaur Information Dex</p>
+                    <div class="glow-card-footer">
+                        <svg class="glow-card-icon" viewBox="0 0 24 24">
                             <path
-                                d="M20.083 15.2l1.202.721a.5.5 0 0 1 0 .858l-8.77 5.262a1 1 0 0 1-1.03 0l-8.77-5.262a.5.5 0 0 1 0-.858l1.202-.721L12 20.05l8.083-4.85zm0-4.7l1.202.721a.5.5 0 0 1 0 .858L12 17.65l-9.285-5.571a.5.5 0 0 1 0-.858l1.202-.721L12 15.35l8.083-4.85zm-7.569-9.191l8.771 5.262a.5.5 0 0 1 0 .858L12 13 2.715 7.429a.5.5 0 0 1 0-.858l8.77-5.262a1 1 0 0 1 1.03 0zM12 3.332L5.887 7 12 10.668 18.113 7 12 3.332z"
-                                fill="rgba(66,193,110,1)"></path>
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                         </svg>
                     </div>
-                    <span class="title">Features
-                    </span>
-                </div>
-
-                <div class="content">
-                    <img src="https://img.freepik.com/free-photo/view-chameleon-with-bright-neon-colors_23-2151682767.jpg?semt=ais_hybrid&w=740"
-                        class="img-fluid">
                 </div>
             </div>
-        </div>
+            <!-- CARD 1 -->
 
+            <!-- CARD 2 -->
+            <div class="glow-image-card">
+                <div class="glow-card-content">
+                    <div class="glow-image-placeholder">
+                        <a href="https://www.facebook.com/nyxroofficial/" target="_blank">
+                            <img src="./assets/project-2.jpg" alt="Private Server : Nyx Ragnarok Online"
+                                class="glow-image-placeholder-img img-fluid">
+                        </a>
+                    </div>
+                    <h3 class="glow-card-title">Ragnarok Private Server : Nyx Ragnarok Online</h3>
+                    <p class="glow-card-description">Main Developer of our very own private server ragnarok.</p>
+                    <div class="glow-card-footer">
+                        <svg class="glow-card-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 2 END -->
+
+            <!-- CARD 3 -->
+            <div class="glow-image-card">
+                <div class="glow-card-content">
+                    <div class="glow-image-placeholder">
+                        <a href="https://www.figma.com/proto/AU7J4hPOn5ouvHo7IwyaQa/UA-DIRECTORY-MAP--MAIN-?node-id=2595-211&t=OdLNdE2772hqhAKG-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
+                            target="_blank">
+                            <img src="./assets/project-3.png" alt="UA Directory Map"
+                                class="glow-image-placeholder-img img-fluid">
+                        </a>
+                    </div>
+                    <h3 class="glow-card-title">UA Directory Map</h3>
+                    <p class="glow-card-description">Designer of our very own project UA Directory Map.</p>
+                    <div class="glow-card-footer">
+                        <svg class="glow-card-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 3 END -->
+        </div>
         <!-- CARDS  -->
     </div>
     <!-- TOOLS -->
-    <div class="bg-dark d-flex justify-content-center align-items-center flex-column p-lg-5 p-3">
+    <div class="bg-dark d-flex justify-content-center align-items-center flex-column p-lg-5 p-3" id="tools">
         <h1 class="display-2 fw-bold my-5 text-white">Tools</h1>
         <!-- START OF TOOL CARDS -->
         <div class="logos flex-column col-lg-10 col-12 col-md-10 col-sm-8 my-3">
@@ -116,7 +159,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/128/3291/3291695.png" />
                 <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png" />
                 <img src="https://cdn-icons-png.flaticon.com/128/5968/5968853.png" />
-                <img src="./assets/mrbeast.svg" />
+                <img src="https://cdn-icons-png.flaticon.com/128/919/919830.png" />
             </div>
 
             <div class="logos-slide">
@@ -127,43 +170,71 @@
                 <img src="https://cdn-icons-png.flaticon.com/128/3291/3291695.png" />
                 <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png" />
                 <img src="https://cdn-icons-png.flaticon.com/128/5968/5968853.png" />
-                <img src="./assets/mrbeast.svg" />
+                <img src="https://cdn-icons-png.flaticon.com/128/919/919830.png" />
             </div>
         </div>
         <!-- TOOL CARDS END -->
     </div>
     <!--TOOLS  -->
 
-    <div class="bg-dark d-flex justify-content-center align-items-center flex-column p-lg-5 p-3 text-light">
+    <div class="bg-dark d-flex justify-content-center align-items-center flex-column p-lg-5 p-3 text-light background-body"
+        id="contact">
         <!-- <h1 class="display-2 fw-bold text-light my-5">Contact Me</h1> -->
-        <!-- FORM -->
-        <div class="form-container">
-            <h1 class="form-h1">Get In Touch</h1>
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your full name" required>
-                </div>
+        <div class="container d-flex flex-wrap justify-content-center align-items-center gap-5">
+            <!-- FORM -->
+            <div class="form-container">
+                <h1 class="form-h1 fw-bold">Get In Touch</h1>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
 
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Tell us what's on your mind..."
-                        required></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us what's on your mind..."
+                            required></textarea>
+                    </div>
 
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+            <!-- FORM -->
+
+            <!-- GOOGLE MAP -->
+            <div class="col-md-6">
+                <div class="ratio ratio-4x3 rounded-3 shadow">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d359.05568741637484!2d120.77933898774474!3d15.149455816261542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396e4c7e1e12dd9%3A0xaaa5d0d3f2baff94!2sParalaya%2C%20Arayat%2C%20Pampanga!5e1!3m2!1sen!2sph!4v1751591177419!5m2!1sen!2sph"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </div>
-        <!-- FORM -->
+        <!-- GOOGLE MAP -->
+
     </div>
 
 
 
+
+    <!-- FOOTER -->
+    <div class="container-fluid bg-dark text-light">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+            <div class="col-md-4 d-flex align-items-center"
+                    class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> <svg
+                        class="bi" width="30" height="24" aria-hidden="true">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg> <span class="mb-3 mb-md-0 text-light">© BRDLYSM | bradleymanalese@gmail.com</span>
+            </div>
+        </footer>
+    </div>
+    <!-- FOOTER -->
 
 
     <!-- MAIN -->
